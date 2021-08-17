@@ -7,7 +7,12 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div data-js="app" class="app"></div>
+    <section class="wrapper">
+      <div data-js="app" class="app" aria-hidden="false"></div>
+      <a href="/" class="link-wrapper" data-js="link">
+        <span data-js="label">Desaparecer</span>
+      </a>
+    </section>
     <script src="./src/main.js" type="module"></script>
   </body>
 </html>
