@@ -14,7 +14,7 @@ link.addEventListener('click', (event) => {
 
   const ariaValue = app.getAttribute('aria-hidden') === 'false' ? 'true' : 'false'
 
-  linkLabel.innerHTML = ariaValue === 'true' ? 'Exibir' : 'Desaparecer'
+  linkLabel.textContent = ariaValue === 'true' ? 'Exibir' : 'Desaparecer'
 
   app.setAttribute('aria-hidden', ariaValue)
 })
