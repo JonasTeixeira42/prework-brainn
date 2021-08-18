@@ -11,5 +11,5 @@ const jane = {
   hobbies: [...john.hobbies, 'MuayThai', 'Programming']
 }
 
-console.log('John:', john)
-console.log('Jane:', jane)
+//console.log('John:', john)
+//console.log('Jane:', jane)
