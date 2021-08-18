@@ -1,4 +1,5 @@
-const calculadora = (callback) => callback
+
+const calculadora = (callback) => (a, b) => callback(a, b)
 
 const sum = calculadora((a, b) => a + b)
 const sub = calculadora((a, b) => a - b)
