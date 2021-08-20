@@ -1,0 +1,56 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.form-wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.label {
+  display: block;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.button-wrapper {
+  text-align: right;
+}
+
+.table-wrapper {
+  margin: 40px auto;
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+}
+
+.table-wrapper,
+.th,
+.td {
+  border: 1px solid #000;
+}
+
+.td {
+  text-align: center;
+  word-wrap: break-word;
+  width: calc(100%/5);
+}
+
+.td > .image {
+  height: 100px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.td > .color {
+  max-width: 100%;
+  height: 100px;
+  border-radius: 4px;
+}
