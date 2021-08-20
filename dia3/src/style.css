@@ -7,7 +7,7 @@
 }
 
 .form-wrapper {
-  max-width: 300px;
+  max-width: 320px;
   margin: 0 auto;
 }
 
@@ -17,4 +17,18 @@
 
 .input {
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.colors-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 3px;
+  border-radius: 4px;
 }
