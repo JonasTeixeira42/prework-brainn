@@ -7,6 +7,44 @@
     <title>Dia 4</title>
   </head>
   <body>
+    <div class="form-wrapper">
+      <h2>Exercicio 3</h2>
+      <form method="POST" data-js="form-car">
+        <label for="image" class="label">URL Imagem</label>
+        <input type="text" class="input" name="image" id="image">
+
+        <label for="model">Modelo</label>
+        <input type="text" class="input" name="model" id="model">
+
+        <label for="year">Ano</label>
+        <input type="text" class="input" name="year" id="year">
+
+        <label for="license">Placa</label>
+        <input type="text" class="input" name="license" id="license">
+
+        <label for="color">Color</label>
+        <input type="color" class="input" name="color" id="color">
+
+        <div class="button-wrapper">
+          <button type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+
+    <table class="table-wrapper">
+      <thead>
+        <tr>
+          <th class="th" scope="col">IMAGE</th>
+          <th class="th" scope="col">MODELO</th>
+          <th class="th" scope="col">ANO</th>
+          <th class="th" scope="col">PLACA</th>
+          <th class="th" scope="col">COR</th>
+        </tr>
+      </thead>
+      <tbody data-js="table-body">
+
+      </tbody>
+    </table>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
