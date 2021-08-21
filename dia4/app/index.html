@@ -7,20 +7,22 @@
     <title>Dia 4</title>
   </head>
   <body>
+    <div class="toast-container" data-js="toast"></div>
+
     <div class="form-wrapper">
-      <h2>Exercicio 3</h2>
+      <h2>Cadastrar carro</h2>
       <form method="POST" data-js="form-car">
         <label for="image" class="label">URL Imagem</label>
-        <input type="text" class="input" name="image" id="image">
+        <input type="text" class="input" name="image" id="image" data-js="input-image">
 
-        <label for="model">Modelo</label>
-        <input type="text" class="input" name="model" id="model">
+        <label for="brandModel">Modelo</label>
+        <input type="text" class="input" name="brandModel" id="brandModel">
 
         <label for="year">Ano</label>
-        <input type="text" class="input" name="year" id="year">
+        <input type="number" class="input" name="year" id="year">
 
-        <label for="license">Placa</label>
-        <input type="text" class="input" name="license" id="license">
+        <label for="plate">Placa</label>
+        <input type="text" class="input" name="plate" id="plate">
 
         <label for="color">Color</label>
         <input type="color" class="input" name="color" id="color">

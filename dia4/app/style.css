@@ -54,3 +54,33 @@
   height: 100px;
   border-radius: 4px;
 }
+
+.toast-container {
+  width: 250px;
+  word-wrap: break-word;
+  padding: 15px;
+  border-radius: 4px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #272727;
+  color: #fff;
+  font-size: 20px;
+  display: none;
+}
+
+.show {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
