@@ -1,9 +1,15 @@
-const request = (url, options) =>
+import { Car } from './main'
+
+type Plate = {
+  plate: string;
+}
+
+const request = (url: string, options?: RequestInit) =>
   fetch(url, options)
     .then(r => r.json())
     .catch(e => ({ error: true, message: e.message }))
 
-const createRequest = (method) => (url, data) => request(url, {
+const createRequest = (method: string) => (url: string, data: Car | Plate) => request(url, {
   method,
   headers: {
     'content-type': 'application/json',
@@ -11,6 +17,6 @@ const createRequest = (method) => (url, data) => request(url, {
   body: JSON.stringify(data)
 })
 
-export const get = (url) => request(url)
+export const get = (url: string) => request(url)
 export const post = createRequest('POST')
 export const del = createRequest('DELETE')
