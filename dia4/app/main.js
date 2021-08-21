@@ -35,7 +35,7 @@ const setNoCarsMessage = () => {
   const tr = document.createElement('tr')
   const td = document.createElement('td')
   tr.dataset.js = 'no-cars'
-  td.colSpan = 5
+  td.colSpan = 6
   td.className = 'td'
   td.textContent = 'Nenhum carro encontrado'
 
@@ -43,9 +43,47 @@ const setNoCarsMessage = () => {
   tbody.appendChild(tr)
 }
 
+const removeRow = async (e) => {
+  const plate = e.target.dataset.js
+
+  try {
+    const response = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({ plate })
+    })
+
+    const data = await response.json()
+
+    if(data.error) {
+      throw data.message
+    }
+
+    addToast(data.message)
+
+    const button = document.querySelector(`[data-js="${plate}"]`)
+    const row = button.parentElement.parentElement
+
+    row.remove()
+  } catch (error) {
+    addToast(error)
+  }
+}
+
 const listCars = (cars) => {
   cars.forEach((car) => {
     const tr = document.createElement('tr')
+    const tdButton = document.createElement('td')
+    tdButton.className = 'td'
+
+    const removeButton = document.createElement('button')
+    removeButton.className = 'button'
+    removeButton.textContent = 'remover'
+    removeButton.dataset.js = car.plate
+
+    removeButton.onclick = removeRow
 
     Object.entries(car).forEach(([name, value]) => {
       const td = document.createElement('td')
@@ -55,8 +93,11 @@ const listCars = (cars) => {
         ? addProperties[name](tr, td, value)
         : addProperties.normal(tr, td, value)
 
-      tbody.appendChild(tr)
     })
+
+    tdButton.appendChild(removeButton)
+    tr.appendChild(tdButton)
+    tbody.appendChild(tr)
   })
 }
 
